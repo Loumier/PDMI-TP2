@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tp2.Home">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nome:" FontSize="Medium"/>
+            <Label Text="{Binding Nome}" FontSize="Medium"/>
+
+
+            <Label Text="Nome:" FontSize="Medium"/>
+            <Label Text="{Binding Nome}" FontSize="Medium"/>
+
+
+            <Label Text="Idade:" FontSize="Medium"/>
+            <Label Text="{Binding Idade}" FontSize="Medium"/>
+
+
+            <Label Text="Profissão:" FontSize="Medium"/>
+            <Label Text="{Binding Profissao}" FontSize="Medium"/>
+
+
+            <Label Text="País:" FontSize="Medium"/>
+            <Label Text="{Binding Pais}" FontSize="Medium"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

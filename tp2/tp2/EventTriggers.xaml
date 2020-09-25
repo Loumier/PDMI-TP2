@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns:global="clr-namespace:tp2.Global"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tp2.EventTriggers">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Entry">
+                <Style.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                        <Setter Property="BackgroundColor" Value="Yellow"/>
+                        <Setter Property="TextColor" Value="Black"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Padding="30">
+            <Label Text="Property Trigger" FontSize="15"/>
+            <Entry Placeholder="Nome"/>
+            <Entry Placeholder="RM"/>
+            <Label Text="Data Trigger" FontSize="15"/>
+            <Entry x:Name="txtEmail"/>
+            <Button x:Name="btnEnviar" Text="Enviar email">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button" Binding="{Binding Source={x:Reference txtEmail}}">
+                        <Setter Property="IsEnabled" Value="False"/>
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+
+            <Label Text="Event trigger" Font="15"/>
+            <Entry Placeholder="Idade" Keyboard="TextChanged">
+                <Entry.Triggers>
+                    <EventTrigger Event="TextChanged">
+                        <global:EntryNumerico/>
+                    </EventTrigger>
+                </Entry.Triggers>
+            </Entry>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

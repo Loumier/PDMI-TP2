@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tp2.StandardStyle">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="SHIFT - Xamarin \n Aplicativos Cross-Platform"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry
+                BackgroundColor="Aquamarine"
+                Placeholder="Estilo baseado no baseStyle"/>
+            <Button
+                Text="Clique aqui"
+                BackgroundColor="DarkBlue"/>
+            <Button
+                Text="SEM ESTILO"
+                HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
